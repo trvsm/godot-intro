@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://33mk35n1kwss"]
+
+[ext_resource type="Material" uid="uid://b25ypyh4sdixj" path="res://material/texture.tres" id="1_a0tk4"]
+[ext_resource type="Material" uid="uid://colwg6deq5066" path="res://material/test.tres" id="1_noarx"]
+[ext_resource type="Material" uid="uid://0lpcpw462do" path="res://material/tranpar.tres" id="2_a0tk4"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_4xowi"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_a202f"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="snow" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="snow"]
+transform = Transform3D(0.999668, 0, 0.0257582, 0, 1, 0, -0.0257582, 0, 0.999668, 0, 0.444, 0)
+mesh = SubResource("SphereMesh_4xowi")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="snow"]
+transform = Transform3D(0.0150861, 0.999545, 0, -0.499772, 0.0301721, 0, 0, 0, 0.5, -0.147331, 0.389436, 0.00580072)
+mesh = SubResource("CylinderMesh_a202f")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="snow"]
+transform = Transform3D(1.55904, 0, 0, 0, 1.55904, 0, 0, 0, 1.55904, 0, -0.396, 0)
+mesh = SubResource("SphereMesh_4xowi")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="snow"]
+transform = Transform3D(0.44721, 0, 0, 0, 0.44721, 0, 0, 0, 0.44721, 0, 1.068, 0)
+material_override = ExtResource("1_a0tk4")
+mesh = SubResource("SphereMesh_4xowi")
+skeleton = NodePath("../..")
+
+[node name="snow2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85192, 0.388343, -0.12013)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="snow2"]
+transform = Transform3D(0.999668, 0, 0.0257582, 0, 1, 0, -0.0257582, 0, 0.999668, 0, 0.444, 0)
+material_override = ExtResource("1_noarx")
+mesh = SubResource("SphereMesh_4xowi")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="snow2"]
+transform = Transform3D(0.0150861, 0.999545, 0, -0.499772, 0.0301721, 0, 0, 0, 0.5, -0.147331, 0.389436, 0.00580072)
+material_override = ExtResource("1_noarx")
+mesh = SubResource("CylinderMesh_a202f")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="snow2"]
+transform = Transform3D(1.55904, 0, 0, 0, 1.55904, 0, 0, 0, 1.55904, 0, -0.396, 0)
+mesh = SubResource("SphereMesh_4xowi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="snow2"]
+transform = Transform3D(0.44721, 0, 0, 0, 0.44721, 0, 0, 0, 0.44721, 0, 1.068, 0)
+material_override = ExtResource("2_a0tk4")
+mesh = SubResource("SphereMesh_4xowi")

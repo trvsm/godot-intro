@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://caljny4pcbmli"]
+
+[ext_resource type="Texture2D" uid="uid://bu2p3e0ty5va4" path="res://assets/Sprites/Player.png" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://bpugk4qrvc6sn" path="res://coin.tscn" id="3_0hol4"]
+[ext_resource type="Script" uid="uid://8vho7cet63b3" path="res://intro.gd" id="3_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(53, 84)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+rotation = 0.00107714
+scale = Vector2(1, 1.35974)
+script = ExtResource("3_epypp")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.480609, 13.2382)
+rotation = -0.000792166
+scale = Vector2(1, 0.735435)
+skew = -0.00067246
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+rotation = -0.000792166
+scale = Vector2(1, 0.735435)
+skew = -0.00067246
+
+[node name="Coin" parent="." instance=ExtResource("3_0hol4")]
+position = Vector2(596, -100)
+
+[node name="Coin2" parent="." instance=ExtResource("3_0hol4")]
+position = Vector2(283, 102)
+
+[node name="Coin3" parent="." instance=ExtResource("3_0hol4")]
+position = Vector2(271, -40)

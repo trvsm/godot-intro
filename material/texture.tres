@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b25ypyh4sdixj"]
+
+[ext_resource type="Texture2D" uid="uid://bu2p3e0ty5va4" path="res://assets/Sprites/Player.png" id="1_x5rwx"]
+
+[resource]
+diffuse_mode = 1
+albedo_texture = ExtResource("1_x5rwx")
+roughness = 0.16
+rim_enabled = true
